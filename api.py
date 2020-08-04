@@ -13,13 +13,13 @@ header = pyfiglet.figlet_format("DAD JOKES 3000")
 header = termcolor.colored(header, color="yellow")
 print(header)
 
-user_input = str(input("enter the joke u want to search: "))
-url = "https://icanhazdadjoke.com/search"
+user_input = str(input("enter the joke u want to search: ")) # taking input from a user
+url = "https://icanhazdadjoke.com/search" # url supporting api
 response = requests.get(url,
                         headers={"Accept": "application/json"},
                         params={"term": user_input, "limit": 1}
 )
-data = response.json()
+data = response.json() # data in the form of json format to dictionary
 nums = data["total_jokes"]
 result = data["results"]
 if nums > 1:
