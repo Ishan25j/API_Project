@@ -1,7 +1,7 @@
 # API Project
 
 from random import choice # for randomizing the output
-import pyfiglet # for getinf a figlet heading
+import pyfiglet # for getting a figlet heading
 import termcolor # chaning color of the string
 import requests # for getting GET request and requesting POST request
 text = termcolor.colored("API Project", color="yellow")
